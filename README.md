@@ -26,7 +26,7 @@ jobs:
           cache: yarn
 
       - name: Install dependencies 📦️
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
 
       - name: Build 🔨
         run: yarn build
