@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ inputs.npm-auth-token }}
+          YARN_NPM_AUTH_TOKEN: ${{ inputs.npm-auth-token }}
 
       - name: Push version changes to main branch 📤
         uses: stefanzweifel/git-auto-commit-action@v4
