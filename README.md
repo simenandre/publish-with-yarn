@@ -1,6 +1,6 @@
-# simenandre/publish-with-yarn-classic
+# simenandre/publish-with-yarn
 
-This composite action will publish your package to NPM using Yarn Classic.
+This composite action will publish your package to NPM using Yarn.
 
 It parses tag version and set that in `package.json` before publishing, and pushes that
 to the default branch after publishing.
@@ -31,7 +31,7 @@ jobs:
       - name: Build 🔨
         run: yarn build
 
-      - uses: simenandre/publish-with-yarn-classic@v1
+      - uses: simenandre/publish-with-yarn@v1
         with:
           npm-auth-token: ${{ secrets.NPM_TOKEN }}
 ```
