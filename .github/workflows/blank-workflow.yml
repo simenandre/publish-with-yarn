@@ -13,15 +13,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Get version from git tag 🏷️
-        id: version
-        uses: jannemattila/get-version-from-tag@v1
-
       - name: Set version to release tag 📝
         shell: bash
-        run:
-          yarn version --no-commit-hooks --no-git-tag-version --new-version ${{
-          steps.version.outputs.version }}
+        run: npm version --allow-same-version --no-commit-hooks --no-git-tag-version from-git
 
       - name: Publish 🚀
         shell: bash
